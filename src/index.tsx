@@ -1,9 +1,16 @@
 import { createRoot } from 'react-dom/client';
-import App from './components/App';
+import axios from 'axios';
 
+import { API_SERVER_URL } from './public-config';
+import App from './components/App';
 
 
 const container = document.getElementById('app');
 const root = createRoot(container);
 
-root.render(<App />)
+axios.get(`${API_SERVER_URL}/contests`)
+    .then((res) => {
+        console.log(res)
+    })
+
+root.render(<App />);
