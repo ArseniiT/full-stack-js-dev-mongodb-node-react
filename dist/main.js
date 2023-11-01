@@ -100,13 +100,33 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./src/components/App.tsx":
+/*!********************************!*\
+  !*** ./src/components/App.tsx ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar Header_1 = __importDefault(__webpack_require__(/*! ./Header */ \"./src/components/Header.tsx\"));\nvar App = function () {\n    return ((0, jsx_runtime_1.jsx)(\"div\", { className: 'container', children: (0, jsx_runtime_1.jsx)(Header_1.default, { msg: 'Naming Contests' }) }));\n};\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://learning-full-stack-javascript-development-mongodb-node-and-react-2424660-main/./src/components/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Header.tsx":
+/*!***********************************!*\
+  !*** ./src/components/Header.tsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar Header = function (_a) {\n    var msg = _a.msg;\n    return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(\"p\", { children: \"Header\" }), (0, jsx_runtime_1.jsx)(\"div\", { children: (0, jsx_runtime_1.jsx)(\"p\", { children: msg }) })] });\n};\nexports[\"default\"] = Header;\n\n\n//# sourceURL=webpack://learning-full-stack-javascript-development-mongodb-node-and-react-2424660-main/./src/components/Header.tsx?");
+
+/***/ }),
+
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
   \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar App = function () {\n    return (0, jsx_runtime_1.jsx)(\"div\", { children: \"React\" });\n};\nvar container = document.getElementById('app');\nvar root = (0, client_1.createRoot)(container);\nroot.render((0, jsx_runtime_1.jsx)(App, {}));\n\n\n//# sourceURL=webpack://learning-full-stack-javascript-development-mongodb-node-and-react-2424660-main/./src/index.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar App_1 = __importDefault(__webpack_require__(/*! ./components/App */ \"./src/components/App.tsx\"));\nvar container = document.getElementById('app');\nvar root = (0, client_1.createRoot)(container);\nroot.render((0, jsx_runtime_1.jsx)(App_1.default, {}));\n\n\n//# sourceURL=webpack://learning-full-stack-javascript-development-mongodb-node-and-react-2424660-main/./src/index.tsx?");
 
 /***/ })
 
@@ -130,7 +150,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
@@ -153,7 +173,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.tsx");
 /******/ 	
 /******/ })()

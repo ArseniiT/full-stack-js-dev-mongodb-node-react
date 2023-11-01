@@ -1,4 +1,5 @@
 /copy
 /node_modules
 /NOTICE
-/package-lock.json
+/package-lock.jso
+/dist/main.js
