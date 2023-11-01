@@ -10,7 +10,7 @@ const root = createRoot(container);
 
 axios.get(`${API_SERVER_URL}/contests`)
     .then((res) => {
-        console.log(res)
+        console.log(res.data)
     })
 
 root.render(<App />);

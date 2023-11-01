@@ -16,10 +16,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.EnvironmentPlugin({
-      HOST: '0.0.0.0',
-      POSRT: '8080'
-    })
-  ]
+  // FIXME fix process/browser definition
+  // plugins: [
+  //   new webpack.ProvidePlugin({
+  //     process: 'process/browser',
+  //   }),
+  //   new webpack.EnvironmentPlugin({
+  //     'process.env.HOST': '0.0.0.0',
+  //     'process.env.PORT': '8080'
+  //   })
+  // ]
 };
