@@ -2,5 +2,4 @@
 /node_modules
 /NOTICE
 /package-lock.jso
-/dist/main.js
-dist/main.js
+dist/
