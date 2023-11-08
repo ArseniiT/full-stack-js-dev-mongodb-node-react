@@ -16,14 +16,14 @@ module.exports = {
       },
     ],
   },
-  // FIXME fix process/browser definition
-  // plugins: [
-  //   new webpack.ProvidePlugin({
-  //     process: 'process/browser',
-  //   }),
-  //   new webpack.EnvironmentPlugin({
-  //     'process.env.HOST': '0.0.0.0',
-  //     'process.env.PORT': '8080'
-  //   })
-  // ]
+  // FIXME how to add HOST and PORT in process.env, it is always empty
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+    // new webpack.EnvironmentPlugin({
+    //   'process.env.HOST': '0.0.0.0',
+    //   'process.env.PORT': '8080'
+    // })
+  ]
 };

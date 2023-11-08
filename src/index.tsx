@@ -7,8 +7,7 @@ import App from './components/App';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-
-axios.get(`${API_SERVER_URL}/contests`)
+axios.get(`${API_SERVER_URL}/api/contests`)
     .then((res) => {
         console.log(res.data)
     })
