@@ -3,3 +3,5 @@
 /NOTICE
 /package-lock.jso
 dist/
+package-lock.json
+dist/main.js

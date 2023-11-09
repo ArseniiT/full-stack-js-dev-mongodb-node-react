@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContestPreview: React.FC<{ contest: object }> = ({ contest }) => {
+const ContestPreview: React.FC<{ contest: any }> = ({ contest }) => {
     return (
         <div className="contest-preview">
             <div className="category">{contest.categoryName}</div>

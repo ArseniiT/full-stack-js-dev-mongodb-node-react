@@ -7,8 +7,8 @@ function ContestList({ initialContests }) {
 
     useEffect(() => {
         fetchContests()
-            .then((data) => {
-                setContests(data.contests)
+            .then((contests) => {
+                setContests(contests)
             });
     }, []);
 

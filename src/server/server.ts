@@ -3,6 +3,7 @@ import os from 'node:os';
 
 import config from './config';
 import apiRouter from './api-router';
+import serverRender from './render';
 
 const server = express();
 
@@ -14,9 +15,11 @@ server.use('/api', apiRouter);
 
 let freeMem = os.freemem();
 
-server.use((req, res) => {
+server.get('/', async (req, res) => {
+    const { initialMarkUp } = await serverRender()
     res.render('index', {
-        freeMem
+        freeMem,
+        initialMarkUp,
     })
 });
 
