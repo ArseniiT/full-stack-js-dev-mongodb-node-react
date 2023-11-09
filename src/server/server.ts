@@ -16,10 +16,11 @@ server.use('/api', apiRouter);
 let freeMem = os.freemem();
 
 server.get('/', async (req, res) => {
-    const { initialMarkUp } = await serverRender()
+    const { initialMarkUp, initialData } = await serverRender()
     res.render('index', {
         freeMem,
         initialMarkUp,
+        initialData
     })
 });
 
