@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import Header from './Header';
 import ContestList from './ContestList';
+import Contest from './Contest';
 
 
 const App = ({ initialData }) => {
-    const [page, setPage] = useState('contestList');
+    const [page, setPage] = useState<'contestList' | 'contest'>('contestList');
+    const [currentContestId, setCurrentContestId] = useState<string | undefined>();
 
-    const navigateToContest = () => {
-        setPage('contest')
+    const navigateToContest = (contestId) => {
+        setPage('contest');
+        setCurrentContestId(contestId);
     }
 
     const pageContent = () => {
@@ -15,7 +18,7 @@ const App = ({ initialData }) => {
             case 'contestList':
                 return <ContestList initialContests={initialData.contests} onContestClick={navigateToContest} />;
             case 'contest':
-                return '........'
+                return <Contest id={currentContestId}/>
         }
     }
 

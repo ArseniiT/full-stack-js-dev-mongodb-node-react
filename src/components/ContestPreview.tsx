@@ -3,7 +3,7 @@ import React from 'react';
 const ContestPreview: React.FC<{ contest: any, onClick: any }> = ({ contest, onClick }) => {
     const showContest = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
-        onClick();
+        onClick(contest.id);
     }
     return (
         <div className='contest-preview' onClick={showContest}>
