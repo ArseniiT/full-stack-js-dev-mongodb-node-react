@@ -2,7 +2,7 @@ import ContestPreview from "./ContestPreview";
 import { useEffect, useState } from 'react';
 import { fetchContests } from "../api-client";
 
-function ContestList({ initialContests }) {
+function ContestList({ initialContests, onContestClick }) {
     let [contests, setContests] = useState(initialContests);
 
     useEffect(() => {
@@ -17,7 +17,11 @@ function ContestList({ initialContests }) {
             {contests?.map((contest) => {
                 console.log(contest)
                 return (
-                    <ContestPreview key={contest.id} contest={contest} />
+                    <ContestPreview
+                        key={contest.id}
+                        contest={contest}
+                        onClick={onContestClick}
+                    />
                 )
             })}
         </div>
