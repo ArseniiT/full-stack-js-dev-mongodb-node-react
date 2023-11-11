@@ -1,30 +1,34 @@
 import ContestPreview from "./ContestPreview";
 import { useEffect, useState } from 'react';
-import { fetchContests } from "../api-client";
+import { fetchContestList } from "../api-client";
+import Header from "./Header";
 
 function ContestList({ initialContests, onContestClick }) {
     let [contests, setContests] = useState(initialContests);
 
     useEffect(() => {
-        fetchContests()
+        fetchContestList()
             .then((contests) => {
                 setContests(contests)
             });
     }, []);
 
     return (
-        <div className="contest-list">
-            {contests?.map((contest) => {
-                console.log(contest)
-                return (
-                    <ContestPreview
+        <>
+            <Header msg={contests.contestName} />
+
+            <div className="contest-list">
+                {contests?.map((contest) => {
+                    return (
+                        <ContestPreview
                         key={contest.id}
                         contest={contest}
                         onClick={onContestClick}
-                    />
-                )
-            })}
-        </div>
+                        />
+                        )
+                    })}
+            </div>
+        </>
     );
 }
 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Header from './Header';
 import ContestList from './ContestList';
 import Contest from './Contest';
 
@@ -24,7 +23,6 @@ const App = ({ initialData }) => {
 
     return (
         <div className='container'>
-            <Header msg='Naming Contests' />
             {pageContent()}
         </div>
     )

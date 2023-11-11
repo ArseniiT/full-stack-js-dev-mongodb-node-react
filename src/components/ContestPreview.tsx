@@ -6,7 +6,7 @@ const ContestPreview: React.FC<{ contest: any, onClick: any }> = ({ contest, onC
         onClick(contest.id);
     }
     return (
-        <div className='contest-preview' onClick={showContest}>
+        <div className='contest-preview link' onClick={showContest}>
             <div className='category'>{contest.categoryName}</div>
             <div className='contest'>{contest.contestName}</div>
         </div>
