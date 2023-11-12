@@ -1,14 +1,8 @@
 import { useEffect, useState } from 'react';
 import { fetchContest } from '../api-client';
 
-function Contest({ id }) {
-    let [contest, setContest] = useState(null);
-
-    useEffect(() => {
-        fetchContest(id).then((contest)=>{
-            setContest(contest);
-        });
-    }, [id]);
+function Contest({ initialContest }) {
+    let [contest, setContest] = useState(initialContest);
 
     return (
         <div className='contest'>

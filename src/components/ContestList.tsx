@@ -15,7 +15,7 @@ function ContestList({ initialContests, onContestClick }) {
 
     return (
         <>
-            <Header msg={contests.contestName} />
+            <Header msg={contests?.contestName} />
 
             <div className="contest-list">
                 {contests?.map((contest) => {

@@ -15,8 +15,8 @@ server.use('/api', apiRouter);
 
 let freeMem = os.freemem();
 
-server.get('/', async (req, res) => {
-    const { initialMarkUp, initialData } = await serverRender()
+server.get(['/', '/contest/:contestId'], async (req, res) => {
+    const { initialMarkUp, initialData } = await serverRender(req)
     res.render('index', {
         freeMem,
         initialMarkUp,
