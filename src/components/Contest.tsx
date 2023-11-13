@@ -17,6 +17,11 @@ function Contest({ initialContest, onContestListClick }) {
         onContestListClick()
     }
 
+    const saveNewName = (event) => {
+        event.preventDefault();
+        const newName = event.target.newName.value;
+    }
+
     return (
         <div className='contest'>
             <div className='title'>Contest Description</div>
@@ -33,6 +38,14 @@ function Contest({ initialContest, onContestListClick }) {
                     ) : (
                         <div className="list">No names  proposed yet</div>
                 )}
+            </div>
+
+            <div className="title">Propose a New Name</div>
+            <div className="body">
+                <form onSubmit={saveNewName}>
+                    <input type="text" name="newName" placeholder='New Name'/>
+                    <button type="submit">Save</button>
+                </form>
             </div>
 
             <a href='/' className='link' onClick={handleClickContestList}>
