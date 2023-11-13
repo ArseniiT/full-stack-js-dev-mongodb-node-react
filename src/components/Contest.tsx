@@ -26,9 +26,9 @@ function Contest({ initialContest, onContestListClick }) {
             <div className="body">
                 {contest.names?.length > 0 ? (
                         <div className="list">
-                            {contest.names.map((proposedName) => {
-                                return (<div key={proposedName.id} className="item">{proposedName.name}</div>)
-                            })}
+                            {contest.names.map((proposedName) => (
+                                <div key={proposedName.id} className="item">{proposedName.name}</div>
+                            ))}
                         </div>
                     ) : (
                         <div className="list">No names  proposed yet</div>
