@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchContest } from '../api-client';
+import { addNewNameToContest, fetchContest } from '../api-client';
 
 function Contest({ initialContest, onContestListClick }) {
     let [contest, setContest] = useState(initialContest);
@@ -17,9 +17,11 @@ function Contest({ initialContest, onContestListClick }) {
         onContestListClick()
     }
 
-    const saveNewName = (event) => {
+    const saveNewName = async (event) => {
         event.preventDefault();
         const newName = event.target.newName.value;
+        const updatedContest = await addNewNameToContest({contestId: contest.id, newName });
+        setContest(updatedContest);
     }
 
     return (
