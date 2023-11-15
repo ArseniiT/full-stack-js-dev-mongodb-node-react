@@ -34,9 +34,9 @@ router.get('/contest/:contestId', async (req, res) => {
 });
 
 router.post('/contest/:contestId', async (req, res) => {
-    const client = await connectClient();
     const {newName} = req.body;
 
+    const client = await connectClient();
     const document = await client.collection('contests')
         .findOneAndUpdate({
             id: req.params.contestId
@@ -52,6 +52,25 @@ router.post('/contest/:contestId', async (req, res) => {
             returnDocument: 'after'
         });
     res.send({ updatedContest: document.value });
+});
+
+router.post('/contests', async (req, res) => {
+    const { contestName, categoryName, description } = req.body;
+
+    const client = await connectClient();
+    const document = await client.collection('contests')
+        .insertOne({
+            id: contestName.toLowerCase().replace(/\s/g, '-'),
+            contestName,
+            categoryName,
+            description,
+            names: [],
+        });
+
+    const contest = await client.collection('contests')
+        .findOne({_id: document.insertedId})
+
+    res.send({ contest });
 });
 
 export default router;

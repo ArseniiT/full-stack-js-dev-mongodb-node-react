@@ -39,6 +39,7 @@ const App = ({ initialData }) => {
     return (
         <div className='container'>
             {pageContent()}
+            
         </div>
     )
 }
