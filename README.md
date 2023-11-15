@@ -1,77 +1,43 @@
-# Learning Full-Stack JavaScript Development: MongoDB, Node, and React
-This is the repository for the LinkedIn Learning course Learning Full-Stack JavaScript Development: MongoDB, Node, and React. The full course is available from [LinkedIn Learning][lil-course-url].
+# LinkedIn Full-Stack JavaScript Development: MongoDB, Node, and React
 
-![Learning Full-Stack JavaScript Development: MongoDB, Node, and React][lil-thumbnail-url] 
+Welcome to the repository for our Full-Stack JavaScript Development project! This project showcases the seamless integration of MongoDB, Node.js, and React.js, providing a robust and modern solution for web development.
 
-Learn by doing! Learn full-stack JavaScript development by building a web application with MongoDB, Node.js, and React.js.
+## Key Features
 
-Learn how to use Node as a web server and an API server, how to consume data and build user interfaces with React, and how to read and write data with a MongoDB database. React allows you to build full-featured, data-driven applications faster and more efficiently than what is possible with JavaScript alone.
+### MongoDB
+- **NoSQL Database:** Harness the power of MongoDB, a NoSQL database, to store and retrieve data efficiently.
+- **Flexibility:** Embrace the flexibility of a schema-less database, allowing for agile development and quick iterations.
 
-Samer Buna introduces modern JavaScript programming concepts, with an emphasis on functional methods and open-source tools. The lessons are almost completely hands-on, with live coding demonstrations that bring the concepts home.
+### Node.js
+- **Server-Side JavaScript:** Utilize Node.js to run JavaScript on the server, enabling a unified language stack across the entire application.
+- **Express.js Framework:** Build scalable and robust server-side applications with the Express.js framework.
 
+### React.js
+- **Efficient UI Components:** Leverage React.js to create modular and reusable UI components, ensuring a smooth and interactive user experience.
+- **Virtual DOM:** Optimize performance with React's virtual DOM, minimizing unnecessary re-rendering and enhancing application speed.
 
-### Reference Text
+### REST API
+- **RESTful Architecture:** Implement a RESTful API design, allowing for standardized communication between the client and server.
+- **Endpoints:** Define clear and intuitive endpoints to handle CRUD (Create, Read, Update, Delete) operations.
 
-#### package.json scripts
+### Docker
+- **Containerization:** Dockerize the application for consistent deployment across different environments.
+- **Isolation:** Achieve environment independence and isolate dependencies with Docker containers.
 
+### Webpack
+- **Module Bundling:** Use Webpack for efficient module bundling, optimizing the application for production deployment.
+- **Hot Module Replacement:** Facilitate faster development with hot module replacement, enabling real-time updates during development.
+
+## Getting Started
+Follow these steps to set up and run the project locally:
+
+1. **Clone the Repository:** `git clone <repository-url>`
+2. **Install Dependencies:**`npm install` (for both server and client)
+3. **Run the Application in separate powershalls:**
 ```
-  "scripts": {
-    "dev:server": "tsnd src/server/server.ts",
-    "dev:bundler": "webpack -w --mode=development"
-  },
-```
-
-#### package.json dependencies
-
-```
-  "dependencies": {
-    "axios": "^0.27.2",
-    "cors": "^2.8.5",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "mongodb": "^4.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ts-loader": "^9.3.1",
-    "typescript": "^4.7.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^5.33.0",
-    "eslint": "^8.22.0",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1",
-    "ts-node-dev": "^2.0.0"
-  }
+  "docker-compose up"
+  "npm run dev:server"
+  "npm run dev:bundler"
 ```
 
-#### Mock Data
-
-```json
-{
-  "contests": [
-    {
-      "id": "cognitive-building-bricks",
-      "categoryName": "Business/Company",
-      "contestName": "Cognitive Building Bricks"
-    },
-    {
-      "id": "educating-people-about-sustainable-food-production",
-      "categoryName": "Magazine/Newsletter",
-      "contestName": "Educating people about sustainable food production"
-    },
-    {
-      "id": "big-data-analytics-for-cash-circulation",
-      "categoryName": "Software Component",
-      "contestName": "Big Data Analytics for Cash Circulation"
-    },
-    {
-      "id": "free-programming-books",
-      "categoryName": "Website",
-      "contestName": "Free programming books"
-    }
-  ]
-}
-```
+Feel free to explore the codebase, experiment with enhancements, and contribute to the project. Happy coding! 🚀
